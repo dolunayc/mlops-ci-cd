@@ -20,8 +20,6 @@ class PredictRequest(BaseModel):
 def health():
     return {"status": "ok"}
 
-
-
 @app.post("/predict")
 def predict(req: PredictRequest):
     bucket = hash_to_bucket(req.user_id, 100)
