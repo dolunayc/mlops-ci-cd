@@ -44,7 +44,6 @@ jobs:
           done
           exit 1
 
-
       - name: Stop Container
         if: always()
         run: docker stop mlops_service
